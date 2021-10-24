@@ -1,11 +1,11 @@
 <div class="key-value-item" id="<%= it.id %>">
 <% if(it.label) { %>
-    <label>
+   <label class="information">
         <%= it.label %>
     </label>
 <% } %>
 <% if(it.value) { %>
-    <span>
+     <span class="key__info">
         <%= it.value %>
     </span>
 <% } %>

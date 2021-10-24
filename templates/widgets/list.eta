@@ -1,13 +1,13 @@
 <div class="key-list-item" id="<%= it.id %>">
     <% if(it.label) { %>
-        <label>
+        <label class="label">
             <%= it.label %>
         </label>
     <% } %>
     <% if(it.data?.length) { %>
-        <ul>
+        <ul class="list">
         <% it.data.forEach(function(item) { %>
-            <li><%= item %></li>
+            <li class="list__item"><%= item %></li>
         <% }) %>
 		</ul>
     <% } %>
