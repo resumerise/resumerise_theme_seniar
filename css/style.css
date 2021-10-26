@@ -301,8 +301,9 @@ img {
 	position: relative;
 	display: flex;
 	align-items: center;
-	flex-direction: row;
 	margin-bottom: var(--mb-0-5);
+	flex-direction: row-reverse;
+	column-gap: .5rem;
 }
 
 .experience .date label {
@@ -312,15 +313,24 @@ img {
 .experience .date {
 	display: flex;
 	flex-direction: column;
-	position: absolute;
 	top: -.2rem;
 	left: -2rem;
 }
 
-.experience .date:nth-child(3) {
-	top: 0.8rem;
+.experience__title {
+	margin-left: var(--mb-0-5);
+	position: relative;
+	margin-left: .5rem;
+	display: inline-block;
 }
 
-.experience__title {
-	margin: 0 0 0 3rem;
+.experience__title::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -10px;
+	height: -webkit-fill-available;
+	background: var(--first-color);
+	width: 4px;
+	border-radius: 1px;
 }
