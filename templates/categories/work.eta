@@ -6,11 +6,6 @@
         <% it.resume?.work.forEach(function(work) { %>
         <%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.work, showDelete: true, id: work.id}) %>
     <div class="box">
-        <% if (work.company) { %>
-        <h4 class="experience__title">
-            <%= work.company %> / Title
-        </h4>
-        <% } %>
         <%~ include('date-range', {
             formatDate: it.formatDate,
             startDate: work.startDate,
@@ -18,6 +13,11 @@
             present: work.present,
             settings: it.resume.settings
         }) %>
+        <% if (work.company) { %>
+        <h4 class="experience__title">
+            <%= work.company %> / Title
+        </h4>
+        <% } %>
     </div>
     <div class="experience__content">
         <%~ include('key-value-item', {

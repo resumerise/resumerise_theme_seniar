@@ -7,12 +7,6 @@
 			<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.project, showDelete: true, id: project.id}) %>
 			
     	<div class="box">
-			<h4 class="project__title">
-				<%~ include('key-value-item', {
-					label: it.resume.settings?.labels?.categoryProperty?.project?.title, 
-					value: project.title,
-				}) %>
-			</h4>
 			<%~ include('date-range', {
 				formatDate: it.formatDate,
 				startDate: project.startDate,
@@ -20,6 +14,13 @@
 				present: project.present,
 				settings: it.resume.settings
 			}) %>
+			<h4 class="project__title">
+				<%~ include('key-value-item', {
+					label: it.resume.settings?.labels?.categoryProperty?.project?.title, 
+					value: project.title,
+				}) %>
+			</h4>
+			
     	</div>
     	<div class="project__content">
 			<%~ include('key-value-item', {

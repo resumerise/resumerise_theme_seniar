@@ -4,11 +4,12 @@
 	<% } %>
 	<div class="certifications__container">
 		<% it.resume?.certifications.forEach(function(certificate) { %>
+		<div class="certifications__card">
 		<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.work}) %>
 		<%~ include('key-value-item', {
-			label: it.resume.settings?.labels?.categoryProperty?.certificate?.issueDate, 
-			value: it.formatDate(certificate.issueDate, it.resume.settings),
-			id: 'date',
+			label: it.resume.settings?.labels?.categoryProperty?.certificate?.title, 
+			value: certificate.title,
+			id: 'certificate-title',
 		}) %>
 		<%~ include('key-value-item', {
 			label: it.resume.settings?.labels?.categoryProperty?.certificate?.issuer, 
@@ -16,10 +17,11 @@
 			id: 'certificate-issuer',
 		}) %>
 		<%~ include('key-value-item', {
-			label: it.resume.settings?.labels?.categoryProperty?.certificate?.title, 
-			value: certificate.title,
-			id: 'certificate-title',
+			label: it.resume.settings?.labels?.categoryProperty?.certificate?.issueDate, 
+			value: it.formatDate(certificate.issueDate, it.resume.settings),
+			id: 'date',
 		}) %>
+	</div>
 		<% }) %>
 	</div>
 	<%~ include('add', {categoryKey: it.resume?.settings?.categoryKeys?.work}) %>

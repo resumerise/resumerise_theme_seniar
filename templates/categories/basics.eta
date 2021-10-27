@@ -1,42 +1,44 @@
 <section class='home section'>
-    <div class="box">
-        <%~ include('profile-picture', {
-            picture: it.resume.basics.picture
-        }) %>
-        <%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.work}) %>
-        <% if (it.resume.settings?.labels?.categoryProperty?.basics?.categoryTitle) { %>
-            <h3 class="homee__title"><%= it.resume.settings.labels.categoryProperty.basics.categoryTitle %></h3>
-        <% } %>
-    </div>
-    <div class="home__data">
-        <%~ include('key-value-item', {
-            label: it.resume.settings?.labels?.categoryProperty?.basics?.name, 
-            value: it.resume.basics.name,
-            id: 'home__title',
-        }) %>
-        <%~ include('key-value-item', {
-            label: it.resume.settings?.labels?.categoryProperty?.basics?.label, 
-            value: it.resume.basics.label,
-            id: 'home__subtitle',
-        }) %>
-    </div>
+    <div class="box1">
+        <div class="box">
+            <%~ include('profile-picture', {
+                picture: it.resume.basics.picture
+            }) %>
+            <%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.work}) %>
+            <% if (it.resume.settings?.labels?.categoryProperty?.basics?.categoryTitle) { %>
+                <h3 class="homee__title"><%= it.resume.settings.labels.categoryProperty.basics.categoryTitle %></h3>
+            <% } %>
+        </div>
+        <div class="home__data">
+            <%~ include('key-value-item', {
+                label: it.resume.settings?.labels?.categoryProperty?.basics?.name, 
+                value: it.resume.basics.name,
+                id: 'home__title',
+            }) %>
+            <%~ include('key-value-item', {
+                label: it.resume.settings?.labels?.categoryProperty?.basics?.label, 
+                value: it.resume.basics.label,
+                id: 'home__subtitle',
+            }) %>
+        </div>
 
-    <div class="home__container">
-        <%~ include('key-value-item', {
-            label: it.resume.settings?.labels?.categoryProperty?.basics?.website, 
-            value: it.resume.basics.website,
-            id: 'home__website',
-        }) %>
-        <%~ include('key-value-item', {
-            label: it.resume.settings?.labels?.categoryProperty?.basics?.email, 
-            value: it.resume.basics.email,
-            id: 'home__info',
-        }) %>
-        <%~ include('key-value-item', {
-            label: it.resume.settings?.labels?.categoryProperty?.basics?.phone, 
-            value: it.resume.basics.phone,
-            id: 'home__info',
-        }) %>
+        <div class="home__container">
+            <%~ include('key-value-item', {
+                label: it.resume.settings?.labels?.categoryProperty?.basics?.website, 
+                value: it.resume.basics.website,
+                id: 'home__website',
+            }) %>
+            <%~ include('key-value-item', {
+                label: it.resume.settings?.labels?.categoryProperty?.basics?.email, 
+                value: it.resume.basics.email,
+                id: 'home__info',
+            }) %>
+            <%~ include('key-value-item', {
+                label: it.resume.settings?.labels?.categoryProperty?.basics?.phone, 
+                value: it.resume.basics.phone,
+                id: 'home__info',
+            }) %>
+        </div>
     </div>
         <%~ include('key-value-item', {
             label: it.resume.settings?.labels?.categoryProperty?.basics?.summary, 

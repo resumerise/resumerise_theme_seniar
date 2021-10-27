@@ -14,7 +14,8 @@
 				startDate: education.startDate,
 				endDate: education.endDate,
 				present: education.present,
-				settings: it.resume.settings
+				settings: it.resume.settings,
+				id: 'date',
 			}) %>
 			<%~ include('key-value-item', {
 				label: it.resume.settings?.labels?.categoryProperty?.education?.institution, 
