@@ -10,12 +10,12 @@
 			<%~ include('key-value-item', {
 				label: it.resume.settings?.labels?.categoryProperty?.skill?.name, 
 				value: skill.name,
-				id: 'skill-name',
+				id: 'skill-info',
 			}) %>
 			<%~ include('key-value-item', {
 				label: it.resume.settings?.labels?.categoryProperty?.skill?.level, 
 				value: skill.level,
-				id: 'skill-level',
+				id: 'skill-info',
 			}) %>
 			<%~ include('list', {
 				label: it.resume.settings?.labels?.categoryProperty?.project?.keywords, 

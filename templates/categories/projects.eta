@@ -5,22 +5,27 @@
 	<div class="project__container">
 		<% it.resume?.projects.forEach(function(project) { %>
 			<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.project, showDelete: true, id: project.id}) %>
-			<%~ include('key-value-item', {
-				label: it.resume.settings?.labels?.categoryProperty?.project?.title, 
-				value: project.title,
-				id: 'project__title',
-			}) %>
-			<%~ include('key-value-item', {
-				label: it.resume.settings?.labels?.categoryProperty?.project?.client, 
-				value: project.client,
-				id: 'project-client',
-			}) %>
+			
+    	<div class="box">
+			<h4 class="project__title">
+				<%~ include('key-value-item', {
+					label: it.resume.settings?.labels?.categoryProperty?.project?.title, 
+					value: project.title,
+				}) %>
+			</h4>
 			<%~ include('date-range', {
 				formatDate: it.formatDate,
 				startDate: project.startDate,
 				endDate: project.endDate,
 				present: project.present,
 				settings: it.resume.settings
+			}) %>
+    	</div>
+    	<div class="project__content">
+			<%~ include('key-value-item', {
+				label: it.resume.settings?.labels?.categoryProperty?.project?.client, 
+				value: project.client,
+				id: 'project-client',
 			}) %>
 			<%~ include('key-value-item', {
 				label: it.resume.settings?.labels?.categoryProperty?.project?.summary, 
@@ -48,6 +53,7 @@
 				id: 'project__list',
 			}) %>
 		<% }) %>
+		</div>
 	</div>
 	<%~ include('add', {categoryKey: it.resume?.settings?.categoryKeys?.project}) %>
 </section>

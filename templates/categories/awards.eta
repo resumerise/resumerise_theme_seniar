@@ -4,27 +4,29 @@
 	<% } %>
 	<div class="awards__container">
 		<% it.resume?.awards.forEach(function(award) { %>
-			<%~ include('nav', {categoryKey: it.resume.settings?.categoryKeys?.award, id: award.id, showDelete: true}) %>
-			<%~ include('key-value-item', {
-				label: it.resume.settings?.labels?.categoryProperty?.award?.title, 
-				value: award.title,
-				id: 'award-title',
-			}) %>
-			<%~ include('key-value-item', {
-				label: it.resume.settings?.labels?.categoryProperty?.award?.date, 
-				value: it.formatDate(award.date, it.resume.settings),
-				id: 'date',
-			}) %>
-			<%~ include('key-value-item', {
-				label: it.resume.settings?.labels?.categoryProperty?.award?.awarder, 
-				value: award.awarder,
-				id: 'award-awarder',
-			}) %>
-			<%~ include('key-value-item', {
-				label: it.resume.settings?.labels?.categoryProperty?.award?.summary, 
-				value: award.summary,
-				id: 'awards__description',
-			}) %>
+			<div>
+				<%~ include('nav', {categoryKey: it.resume.settings?.categoryKeys?.award, id: award.id, showDelete: true}) %>
+				<%~ include('key-value-item', {
+					label: it.resume.settings?.labels?.categoryProperty?.award?.title, 
+					value: award.title,
+					id: 'award-title',
+				}) %>
+				<%~ include('key-value-item', {
+					label: it.resume.settings?.labels?.categoryProperty?.award?.date, 
+					value: it.formatDate(award.date, it.resume.settings),
+					id: 'date',
+				}) %>
+				<%~ include('key-value-item', {
+					label: it.resume.settings?.labels?.categoryProperty?.award?.awarder, 
+					value: award.awarder,
+					id: 'award-awarder',
+				}) %>
+				<%~ include('key-value-item', {
+					label: it.resume.settings?.labels?.categoryProperty?.award?.summary, 
+					value: award.summary,
+					id: 'awards__description',
+				}) %>
+			</div>
 		<% }) %>
 	</div>
 	<%~ include('add', {categoryKey: it.resume.settings?.categoryKeys?.award}) %>

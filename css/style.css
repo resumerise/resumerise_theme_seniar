@@ -108,6 +108,14 @@ ul {
 	padding: 0;
 }
 
+li {
+	margin-left: 1rem;
+}
+
+li::marker {
+	opacity: .7;
+}
+
 a {
 	text-decoration: none;
 }
@@ -183,6 +191,10 @@ img {
 	'skills certifications certifications'
 	'awards interests interests'
 	'languages location location'; */
+}
+
+.key-list-item .labeal {
+	font-size: 1.01rem;
 }
 
 /* .awards{
@@ -283,6 +295,19 @@ img {
 	text-align: center;
 }
 
+/*========== EDUCATION SECTION ==========*/
+#education-institution{
+	color: var(--black-color);
+	font-size: 1.05rem;
+}
+#education-area .key__info{
+	color: var(--black-color);
+}
+.education__container{
+	display: flex;
+	flex-direction: column;
+	row-gap: var(--mb-1-5);
+}
 /*========== LOCATION SECTION ==========*/
 
 .location__container {
@@ -293,6 +318,10 @@ img {
 
 #location__info .information {
 	font-weight: var(--font-semi-bold);
+}
+
+#url {
+	font-size: small;
 }
 
 /*========== EXPERIENCE SECTION ==========*/
@@ -306,25 +335,32 @@ img {
 	column-gap: .5rem;
 }
 
-.experience .date label {
+
+.experience .date label,
+.project .date label,
+.education .date label{
 	display: none;
 }
 
-.experience .date {
+.experience .date{
 	display: flex;
 	flex-direction: column;
-	top: -.2rem;
-	left: -2rem;
+	margin-top: 1.1rem;
 }
 
-.experience__title {
+.project .date {
+	display: flex;
+	flex-direction: column;
+}
+
+.experience__title, .project__title {
 	margin-left: var(--mb-0-5);
 	position: relative;
 	margin-left: .5rem;
 	display: inline-block;
 }
 
-.experience__title::before {
+.experience__title::before, .project__title::before {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -333,4 +369,87 @@ img {
 	background: var(--first-color);
 	width: 4px;
 	border-radius: 1px;
+}
+
+#experience__description, #project__description {
+	margin: var(--mb-1) 0 var(--mb-0-5);
+}
+
+/*========== AWARDS & VOLUNTEER SECTION ==========*/
+
+.awards .information {
+	display: none;
+}
+
+.awards__container,
+.references__container{
+	display: flex;
+	flex-direction: column;
+	row-gap: var(--mb-1);
+}
+
+#award-title,
+#volunteer-organization,
+#reference__description .information{
+	font-size: var(--h3-font-size);
+	color: var(--black-color);
+	font-weight: var(--font-semi-bold);
+}
+
+#award-awarder, #volunteer-info,
+#experience__info .information,
+#reference-name .key__info {
+	color: var(--black-color);
+}
+
+#awards__description,
+#volunteer__description,
+#reference__description {
+	margin-top: var(--mb-0-5);
+}
+
+#volunteer__list {
+	margin-top: var(--mb-1-5);
+}
+
+/*========== SKILLS SECTION ==========*/
+
+#skill-info .information, #profiles__info .information {
+	color: var(--black-color);
+	position: relative;
+}
+
+#skill-info .information::after, #profiles__info .information::after {
+	content: ' :';
+}
+
+#skills__list {
+	margin-top: var(--mb-0-5);
+}
+
+/*========== PUBLICATIONS SECTION ==========*/
+.publications__container{
+	display: flex;
+	flex-direction: column;
+	row-gap: var(--mb-1);
+}
+.publications__card{
+	row-gap: var(--mb-0-25);
+	display: flex;
+	flex-direction: column;
+}
+.publications__container .information{
+	color: var(--black-color);
+	font-weight: 500;
+}
+/*========== LANGUAGE SECTION ==========*/
+.languages__container{
+	display: flex;
+	flex-direction: column;
+	row-gap: var(--mb-1);
+}
+
+#language-language .key__info{
+	color: var(--black-color);
+	font-weight: 500;
 }

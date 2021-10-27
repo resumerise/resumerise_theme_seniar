@@ -22,12 +22,12 @@
 			<%~ include('key-value-item', {
 				label: it.resume.settings?.labels?.categoryProperty?.volunteer?.position, 
 				value: volunteer.position,
-				id: 'volunteer-position',
+				id: 'volunteer-info',
 			}) %>
 			<%~ include('key-value-item', {
 				label: it.resume.settings?.labels?.categoryProperty?.volunteer?.website, 
 				value: volunteer.website,
-				id: 'volunteer-website',
+				id: 'volunteer-info',
 			}) %>
 			<%~ include('key-value-item', {
 				label: it.resume.settings?.labels?.categoryProperty?.volunteer?.summary, 
