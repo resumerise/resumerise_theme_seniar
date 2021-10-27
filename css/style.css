@@ -6,18 +6,16 @@
 :root {
 	--header-height: 3rem;
 	/*========== COLORS ==========*/
-	/*Purple 250 - Green 142 - Blue 230 - Pink 340*/
-	--hue-color: 20;
-	--first-color: hsl(var(--hue-color), 69%, 61%);
-	--first-color-second: hsl(var(--hue-color), 69%, 61%);
-	--first-color-alt: hsl(var(--hue-color), 57%, 53%);
-	--first-color-lighter: hsl(var(--hue-color), 92%, 85%);
-	--first-color-lighter-dark: hsl(var(--hue-color), 8%, 15%);
-	--title-color: hsl(var(--hue-color), 8%, 15%);
-	--text-color: hsl(var(--hue-color), 8%, 45%);
-	--text-color-light: hsl(var(--hue-color), 8%, 65%);
-	--input-color: hsl(var(--hue-color), 70%, 96%);
-	--body-color: hsl(var(--hue-color), 60%, 99%);
+	--first-color: #ff7a38;
+	--first-color-second: #e08557;
+	--first-color-alt: #cb7043;
+	--first-color-lighter: #e08557;
+	--first-color-lighter-dark: #292523;
+	--title-color: #292523;
+	--text-color: #7c706a;
+	--text-color-light: #ada39f;
+	--input-color: #fcf2ee;
+	--body-color: #fefcfb;
 	--container-color: white;
 	--white-color: var(--container-color);
 	--black-color: black;
@@ -386,6 +384,9 @@ img {
 	position: relative;
 	font-size: 1.4rem;
 	display: inline-block;
+}
+.experience__title, .project__title, .education__title {
+	color: var(--black-color);
 }
 
 .experience__title::before, .project__title::before {
