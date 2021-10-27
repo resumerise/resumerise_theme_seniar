@@ -483,6 +483,7 @@ img {
 @media screen and (min-width: 668px) {
 	.main {
 		display: grid;
+		margin: auto;
 		grid-template-columns: repeat(2, 1fr);
 	}
 	.home {
