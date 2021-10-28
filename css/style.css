@@ -6,10 +6,10 @@
 :root {
 	--header-height: 3rem;
 	/*========== COLORS ==========*/
-	--first-color: #ff7a38;
-	--first-color-second: #e08557;
-	--first-color-alt: #cb7043;
-	--first-color-lighter: #e08557;
+	--first-color: #ff614d;
+	--first-color-second: #e06757;
+	--first-color-alt: #cb5343;
+	--first-color-lighter: #e06757;
 	--first-color-lighter-dark: #292523;
 	--title-color: #292523;
 	--text-color: #7c706a;
@@ -208,6 +208,7 @@ img {
 #home__subtitle {
 	font-size: var(--h3-font-size);
 	margin: 0;
+	color: var(--black-color);
 	font-weight: 300;
 }
 
@@ -309,7 +310,8 @@ img {
 .experience .date {
 	display: flex;
 	flex-direction: column;
-	margin-top: 1.1rem;
+	/* margin-top: 1.1rem; */
+	margin-right: 0.7rem;
 }
 
 .project .date {
@@ -386,6 +388,10 @@ img {
 }
 
 #award-awarder, #volunteer-info, #experience__info .information, #reference-name .key__info {
+	color: var(--black-color);
+}
+#experience__info{
+	font-style: italic;
 	color: var(--black-color);
 }
 
