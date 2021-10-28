@@ -6,15 +6,15 @@
 		<% it.resume?.awards.forEach(function(award) { %>
 			<div>
 				<%~ include('nav', {categoryKey: it.resume.settings?.categoryKeys?.award, id: award.id, showDelete: true}) %>
+					<%~ include('key-value-item', {
+					label: it.resume.settings?.labels?.categoryProperty?.award?.date, 
+					value: it.formatDate(award.date, it.resume.settings),
+					id: 'date',
+				}) %>
 				<%~ include('key-value-item', {
 					label: it.resume.settings?.labels?.categoryProperty?.award?.title, 
 					value: award.title,
 					id: 'award-title',
-				}) %>
-				<%~ include('key-value-item', {
-					label: it.resume.settings?.labels?.categoryProperty?.award?.date, 
-					value: it.formatDate(award.date, it.resume.settings),
-					id: 'date',
 				}) %>
 				<%~ include('key-value-item', {
 					label: it.resume.settings?.labels?.categoryProperty?.award?.awarder, 
