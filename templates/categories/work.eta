@@ -13,23 +13,28 @@
             present: work.present,
             settings: it.resume.settings
         }) %>
-        <% if (work.company) { %>
-        <h4 class="experience__title">
-            <%= work.company %> / Title
-        </h4>
-        <% } %>
+        <div class="box3">
+            <div class="box4">
+                <% if (work.company) { %>
+                <h4 class="experience__title">
+                    <%= work.company %> / Title
+                </h4>
+                <% } %>
+            <%~ include('key-value-item', {
+                label: it.resume.settings?.labels?.categoryProperty?.work?.position, 
+                value: work.position,
+                id: 'experience__info',
+            }) %>
+           
+            </div>
+        </div>
     </div>
     <div class="experience__content">
         <%~ include('key-value-item', {
-            label: it.resume.settings?.labels?.categoryProperty?.work?.position, 
-            value: work.position,
-            id: 'experience__info',
-        }) %>
-        <%~ include('key-value-item', {
-            label: it.resume.settings?.labels?.categoryProperty?.work?.website, 
-            value: work.website,
-            id: 'experience__info',
-        }) %>
+                label: it.resume.settings?.labels?.categoryProperty?.work?.website, 
+                value: work.website,
+                id: 'experience__info',
+            }) %>
         <%~ include('key-value-item', {
             label: it.resume.settings?.labels?.categoryProperty?.work?.summary, 
             value: work.summary,

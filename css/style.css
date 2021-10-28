@@ -317,17 +317,41 @@ img {
 	flex-direction: column;
 }
 
-.experience__title, .project__title {
+.experience__title,
+.project__title {
 	margin-left: var(--mb-0-5);
 	position: relative;
 	font-size: 1.4rem;
 	display: inline-block;
 }
-.experience__title, .project__title, .education__title {
+.experience__title,
+.project__title,
+.education__title {
 	color: var(--black-color);
+	margin: 0;
 }
 
-.experience__title::before, .project__title::before {
+/* .experience__title::before, */
+.project__title::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -10px;
+	height: -webkit-fill-available;
+	background: var(--first-color);
+	width: 2px;
+	border-radius: 1px;
+}
+.box4{
+	display: flex;
+	flex-direction: column;
+}
+.box3{
+	display: flex;
+    align-items: center;
+	position: relative;
+}
+.box3::before{
 	content: '';
 	position: absolute;
 	top: 0;
@@ -338,7 +362,8 @@ img {
 	border-radius: 1px;
 }
 
-#experience__description, #project__description {
+#experience__description,
+#project__description {
 	margin: var(--mb-1) 0 var(--mb-0-5);
 }
 
@@ -413,6 +438,9 @@ img {
 	color: var(--black-color);
 	font-weight: 500;
 }
+.box4 .information {
+    display: none;
+}
 
 @media screen and (min-width: 668px) {
 	.main {
@@ -436,10 +464,14 @@ img {
 		grid-column: 2/3;
 		grid-row: 2/3;
 	}
-	.experience .date, .project .date, .education .date {
-		margin-right: .5rem;
+	.experience .date,
+	.project .date,
+	.education .date {
+		margin: 0 .5rem 0 0;
 	}
-	.section__title{
+	.section__title,
+	#home__title,
+	#home__subtitle{
 		text-align: initial;
 	}
 }
