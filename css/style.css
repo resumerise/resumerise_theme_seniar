@@ -390,7 +390,7 @@ img {
 #award-awarder, #volunteer-info, #experience__info .information, #reference-name .key__info {
 	color: var(--black-color);
 }
-#experience__info{
+.box #experience__info{
 	font-style: italic;
 	color: var(--black-color);
 }
