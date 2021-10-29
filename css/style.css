@@ -111,7 +111,7 @@ li {
 }
 
 li::marker {
-	opacity: .7;
+    color: #D8D9D9;
 }
 
 a {
@@ -177,6 +177,9 @@ img {
 	font-size: 1.01rem;
 }
 /*========== HOME SECTION ==========*/
+.information{
+	color: #303030;
+}
 
 .home .information {
 	display: none;
@@ -479,5 +482,23 @@ img {
 	#home__title,
 	#home__subtitle{
 		text-align: initial;
+	}
+	.volunteer {
+		margin-top: -75rem;
+	}
+	.skills {
+	    margin-top: -62rem;
+	}
+	.publications {
+		margin-top: -60rem;
+	}
+	.certifications {
+		margin-top: -69rem;
+	}
+	.education {
+		margin-top: -92rem;
+	}
+	.profiles {
+		margin-top: -44rem;
 	}
 }
