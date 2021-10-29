@@ -7,17 +7,17 @@
 	<div class="volunteer__container">
 		<% it.resume?.volunteer.forEach(function(volunteer) { %>
 			<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.volunteer, showDelete: true, id: volunteer.id}) %>
-			<%~ include('key-value-item', {
-				label: it.resume.settings?.labels?.categoryProperty?.volunteer?.organization, 
-				value: volunteer.organization,
-				id: 'volunteer-organization',
-			}) %>
 			<%~ include('date-range', {
 				formatDate: it.formatDate,
 				startDate: volunteer.startDate,
 				endDate: volunteer.endDate,
 				present: volunteer.present,
 				settings: it.resume.settings
+			}) %>
+			<%~ include('key-value-item', {
+				label: it.resume.settings?.labels?.categoryProperty?.volunteer?.organization, 
+				value: volunteer.organization,
+				id: 'volunteer-organization',
 			}) %>
 			<%~ include('key-value-item', {
 				label: it.resume.settings?.labels?.categoryProperty?.volunteer?.position, 
