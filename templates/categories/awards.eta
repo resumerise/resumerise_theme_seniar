@@ -1,30 +1,32 @@
-<section class="awards section">
+<section class="awards">
 	<% if(it.resume.settings?.labels?.categoryProperty?.award?.categoryTitle) { %>
 		<h3 class="section__title"><%= it.resume.settings.labels.categoryProperty.award.categoryTitle %></h3>
 	<% } %>
-	<div class="awards__container">
+	<div class="category-container">
 		<% it.resume?.awards.forEach(function(award) { %>
 			<div>
 				<%~ include('nav', {categoryKey: it.resume.settings?.categoryKeys?.award, id: award.id, showDelete: true}) %>
 					<%~ include('key-value-item', {
 					label: it.resume.settings?.labels?.categoryProperty?.award?.date, 
 					value: it.formatDate(award.date, it.resume.settings),
+					showLabel: false,
 					id: 'date',
 				}) %>
 				<%~ include('key-value-item', {
 					label: it.resume.settings?.labels?.categoryProperty?.award?.title, 
 					value: award.title,
-					id: 'award-title',
+					showLabel: false,
+					classes: "category-item-title"
 				}) %>
 				<%~ include('key-value-item', {
 					label: it.resume.settings?.labels?.categoryProperty?.award?.awarder, 
 					value: award.awarder,
-					id: 'award-awarder',
+					showLabel: false,
 				}) %>
 				<%~ include('key-value-item', {
 					label: it.resume.settings?.labels?.categoryProperty?.award?.summary, 
 					value: award.summary,
-					id: 'awards__description',
+					showLabel: false,
 				}) %>
 			</div>
 		<% }) %>

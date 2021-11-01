@@ -9,22 +9,72 @@
 			<%~ it.css %>
 			<%~ it.widgetCss %>
 			@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Zen+Antique+Soft&display=swap');
+			@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap');
 			body {
 				font-family: 'Poppins', sans-serif;
-			}
-			.box .key__info{
-				font-family: 'Zen Antique Soft', serif;
 			}
 		</style>
 	</head>
 	<body>
 		<div class="main container">
-			<% it.templates.forEach(function(template){ %>
-				<%~ include(template, {
-					resume: it.resume,
-					formatDate: it.formatDate
-				}) %>
-			<% }) %>
+			<%~ include("basic", {
+				resume: it.resume,
+				formatDate: it.formatDate
+			}) %>
+			<div class="categories">
+				<div class="left">
+					<%~ include("skills", {
+						resume: it.resume,
+						formatDate: it.formatDate
+					}) %>
+					<%~ include("awards", {
+						resume: it.resume,
+						formatDate: it.formatDate
+					}) %>
+					<%~ include("profile", {
+						resume: it.resume,
+						formatDate: it.formatDate
+					}) %>
+					<%~ include("interest", {
+						resume: it.resume,
+						formatDate: it.formatDate
+					}) %>
+					<%~ include("language", {
+						resume: it.resume,
+						formatDate: it.formatDate
+					}) %>
+				</div>
+				<div class="right">
+					<%~ include("work", {
+						resume: it.resume,
+						formatDate: it.formatDate
+					}) %>
+					<%~ include("project", {
+						resume: it.resume,
+						formatDate: it.formatDate
+					}) %>
+					<%~ include("education", {
+						resume: it.resume,
+						formatDate: it.formatDate
+					}) %>
+					<%~ include("publication", {
+						resume: it.resume,
+						formatDate: it.formatDate
+					}) %>
+					<%~ include("reference", {
+						resume: it.resume,
+						formatDate: it.formatDate
+					}) %>
+					<%~ include("volunteer", {
+						resume: it.resume,
+						formatDate: it.formatDate
+					}) %>
+					<%~ include("certification", {
+						resume: it.resume,
+						formatDate: it.formatDate
+					}) %>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>
