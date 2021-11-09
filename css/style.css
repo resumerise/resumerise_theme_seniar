@@ -223,6 +223,10 @@ label {
 	font-weight: 300;
 }
 
+.profession__title, .profession__subtitle {
+	text-align: center;
+}
+
 .profile__aboutme {
 	margin: var(--mb-3) 0;
 	text-align: center;
@@ -399,7 +403,7 @@ label {
 	.experience .date, .project .date, .education .date {
 		margin: 0 .5rem 0 0;
 	}
-	.section__title, #home__title, #home__subtitle {
+	.section__title, #home__title, #home__subtitle, .profession__title, .profession__subtitle {
 		text-align: initial;
 	}
 }
