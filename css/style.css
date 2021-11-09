@@ -224,7 +224,7 @@ label {
 	font-weight: 300;
 }
 
-.profession__title, .profession__subtitle {
+.profession__title, .profession__subtitle, .profession__contact {
 	text-align: center;
 }
 
@@ -404,7 +404,7 @@ label {
 	.experience .date, .project .date, .education .date {
 		margin: 0 .5rem 0 0;
 	}
-	.section__title, #home__title, #home__subtitle, .profession__title, .profession__subtitle {
+	.section__title, #home__title, #home__subtitle, .profession__title, .profession__subtitle, .profession__contact {
 		text-align: initial;
 	}
 }
