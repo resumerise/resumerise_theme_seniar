@@ -1,4 +1,4 @@
-<section class='location section'>
+<section class='location' id="location">
     <% if (it.resume.settings?.labels?.categoryProperty?.location?.categoryTitle) { %>
         <h3 class='section__title r'><%= it.resume.settings?.labels?.categoryProperty?.location?.categoryTitle %></h3>
     <% } %>
@@ -8,26 +8,31 @@
             label: it.resume.settings?.labels?.categoryProperty?.location?.address, 
             value: it.resume.basics?.location?.address,
             id: 'location__info',
+            showLabel: false,
         }) %>
         <%~ include('key-value-item', {
             label: it.resume.settings?.labels?.categoryProperty?.location?.postalCode, 
             value: it.resume.basics?.location?.postalCode,
             id: 'location__info',
+            showLabel: false,
         }) %>
         <%~ include('key-value-item', {
             label: it.resume.settings?.labels?.categoryProperty?.location?.city, 
             value: it.resume.basics?.location?.city,
             id: 'location__info',
+            showLabel: false,
         }) %>
         <%~ include('key-value-item', {
             label: it.resume.settings?.labels?.categoryProperty?.location?.countryCode, 
             value: it.resume.basics?.location?.countryCode,
             id: 'location__info',
+            showLabel: false,
         }) %>
         <%~ include('key-value-item', {
             label: it.resume.settings?.labels?.categoryProperty?.location?.region, 
             value: it.resume.basics?.location?.region,
             id: 'location__info',
+            showLabel: false,
         }) %>
     </div>
 </section>

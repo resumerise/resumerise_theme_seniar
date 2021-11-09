@@ -1,4 +1,4 @@
-<section class="volunteer">
+<section class="volunteer" id="volunteer">
 	<% if(it.resume.settings?.labels?.categoryProperty?.volunteer?.categoryTitle) { %>
 		<h3 class="section__title r">
 			<%= it.resume.settings.labels.categoryProperty.volunteer.categoryTitle %>
@@ -35,11 +35,11 @@
                 </div>
 				<%~ include('key-value-item', {
 					label: it.resume.settings?.labels?.categoryProperty?.volunteer?.website, 
-					value: volunteer.website
+					value: volunteer.website,
 				}) %>
 				<%~ include('key-value-item', {
 					label: it.resume.settings?.labels?.categoryProperty?.volunteer?.summary, 
-					value: volunteer.summary
+					value: volunteer.summary,
 				}) %>
 				<%~ include('list', {
 					label: it.resume.settings?.labels?.categoryProperty?.volunteer?.highlights, 

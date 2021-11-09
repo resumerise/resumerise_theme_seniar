@@ -182,9 +182,18 @@ label {
 /*========== HEADER SECTION ==========*/
 
 .profile {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: row;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
 	justify-content: space-between;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
 }
 
@@ -243,11 +252,20 @@ label {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	margin-left: calc(-1 * var(--column-gap));
+	/* margin-left: calc(-1 * var(--column-gap)); */
 	margin-bottom: var(--mb-0-5);
+	-webkit-column-gap: .5rem;
+	-moz-column-gap: .5rem;
 	column-gap: .5rem;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
 	flex-direction: row;
+	-webkit-box-pack: start;
+	-ms-flex-pack: start;
 	justify-content: flex-start;
+	-webkit-box-align: start;
+	-ms-flex-align: start;
 	align-items: flex-start;
 }
 
@@ -258,6 +276,8 @@ label {
 	display: inline-block;
 	color: var(--black-color);
 	margin: 0;
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
 	display: inline-flex;
 }
 
@@ -265,6 +285,9 @@ label {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
 	-webkit-box-align: center;
 	-ms-flex-align: center;
@@ -281,6 +304,8 @@ label {
 	background: var(--first-color);
 	width: 2px;
 	border-radius: 1px;
+	-ms-flex-item-align: normal;
+	-ms-grid-row-align: normal;
 	align-self: normal;
 }
 
@@ -307,7 +332,12 @@ label {
 }
 
 .headline-complex .date {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
 }
 
@@ -322,25 +352,48 @@ label {
 	flex-direction: column;
 }
 
-@media screen and (min-width: 668px) {
+@media screen and (min-width: 878px) {
 	.main {
 		margin: auto;
 	}
+	.profile {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: row;
+		flex-direction: row;
+	}
 	.main .categories {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: row;
 		flex-direction: row;
 	}
 	.categories .left {
 		padding-right: var(--column-gap-large);
 	}
 	.left, .right {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
 		flex-direction: column;
 		row-gap: var(--mb-2-5);
 	}
 	.headline-complex {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: row;
 		flex-direction: row;
+		-webkit-box-align: start;
+		-ms-flex-align: start;
 		align-items: flex-start;
 	}
 	.experience .date, .project .date, .education .date {

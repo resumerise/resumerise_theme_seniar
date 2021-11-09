@@ -1,4 +1,4 @@
-<section class="publications">
+<section class="publications" id="publications">
 	<% if(it.resume.settings?.labels?.categoryProperty?.publication?.categoryTitle) { %>
 		<h3 class="section__title r"><%= it.resume.settings.labels.categoryProperty.publication.categoryTitle %></h3>
 	<% } %>
@@ -10,6 +10,7 @@
                 showLabel: false,
                 label: it.resume.settings?.labels?.categoryProperty?.publication?.name, 
                 value: publication.name,
+                showLabel: false,
                 classes: "category-item-title"
             }) %>
             <%~ include('key-value-item', {

@@ -1,4 +1,4 @@
-<section>
+<section class="home" id="basics">
     <div class="profile">
         <div class="profile__image">
             <%~ include('profile-picture', {

@@ -1,4 +1,4 @@
-<section class="project">
+<section class="project" id="project">
 	<% if (it.resume.settings?.labels?.categoryProperty?.project?.categoryTitle) { %>
 		<h3 class="section__title"><%= it.resume.settings?.labels?.categoryProperty?.project?.categoryTitle %></h3>
 	<% } %>
@@ -39,18 +39,22 @@
 				<%~ include('key-value-item', {
 					label: it.resume.settings?.labels?.categoryProperty?.project?.summary, 
 					value: project.summary,
+					showLabel: false,
 				}) %>
 				<%~ include('list', {
 					label: it.resume.settings?.labels?.categoryProperty?.project?.products, 
 					data: project.products,
+					showLabel: false,
 				}) %>
 				<%~ include('list', {
 					label: it.resume.settings?.labels?.categoryProperty?.project?.roles, 
-					data: project.roles
+					data: project.roles,
+					showLabel: false,
 				}) %>
 				<%~ include('list', {
 					label: it.resume.settings?.labels?.categoryProperty?.project?.highlights, 
-					data: project.highlights
+					data: project.highlights,
+					showLabel: false,
 				}) %>
 			</div>
 		<% }) %>
