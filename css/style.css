@@ -409,3 +409,55 @@ label {
 		text-align: initial;
 	}
 }
+
+@media print {
+	.main {
+		margin: auto;
+	}
+	.profile {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: row;
+		flex-direction: row;
+	}
+	.main .categories {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: row;
+		flex-direction: row;
+	}
+	.categories .left {
+		padding-right: var(--column-gap-large);
+	}
+	.left, .right {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		row-gap: var(--mb-2-5);
+	}
+	.headline-complex {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: row;
+		flex-direction: row;
+		-webkit-box-align: start;
+		-ms-flex-align: start;
+		align-items: flex-start;
+	}
+	.experience .date, .project .date, .education .date {
+		margin: 0 .5rem 0 0;
+	}
+	.section__title, #home__title, #home__subtitle, .profession__title, .profession__subtitle, .profession__contact {
+		text-align: initial;
+	}
+}
