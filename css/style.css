@@ -412,6 +412,12 @@ label {
 	}
 }
 
+@media screen and (min-width: 967px) {
+	.headline-complex {
+		margin-left: -5.6rem;
+	}
+}
+
 @media print {
 	.main {
 		margin: auto;
