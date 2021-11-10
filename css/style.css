@@ -345,7 +345,6 @@ label {
 	-webkit-box-direction: normal;
 	-ms-flex-direction: column;
 	flex-direction: column;
-	margin-left: -1rem;
 }
 
 .category-item-container {
