@@ -345,6 +345,7 @@ label {
 	-webkit-box-direction: normal;
 	-ms-flex-direction: column;
 	flex-direction: column;
+	margin-left: -1rem;
 }
 
 .category-item-container {
@@ -401,6 +402,7 @@ label {
 		-webkit-box-align: start;
 		-ms-flex-align: start;
 		align-items: flex-start;
+		margin-left: -5.25rem;
 	}
 	.experience .date, .project .date, .education .date {
 		margin: 0 .5rem 0 0;
@@ -453,6 +455,7 @@ label {
 		-webkit-box-align: start;
 		-ms-flex-align: start;
 		align-items: flex-start;
+		margin-left: -5.25rem;
 	}
 	.experience .date, .project .date, .education .date {
 		margin: 0 .5rem 0 0;
