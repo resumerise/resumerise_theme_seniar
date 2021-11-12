@@ -1,43 +1,51 @@
-<section id="work">
+<section class="experience" id="experience">
     <% if (it.resume.settings?.labels?.categoryProperty?.work?.categoryTitle) { %>
-        <h1><%= it.resume.settings?.labels?.categoryProperty?.work?.categoryTitle %></h1>
+        <h3 class="section__title r"><%= it.resume.settings?.labels?.categoryProperty?.work?.categoryTitle %></h3>
     <% } %>
-    <% it.resume?.work.forEach(function(work) { %>
-    <div class="item content">
-        <%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.work, showDelete: true, id: work.id}) %>
-        <% if (work.company) { %>
-        <h2>
-            <%= work.company %>
-        </h2>
-        <% } %>
-        <%~ include('date-range', {
-            formatDate: it.formatDate,
-            startDate: work.startDate,
-            endDate: work.endDate,
-            present: work.present,
-            settings: it.resume.settings
-        }) %>
-        <%~ include('key-value-item', {
-            label: it.resume.settings?.labels?.categoryProperty?.work?.position, 
-            value: work.position,
-            id: 'work-position',
-        }) %>
-        <%~ include('key-value-item', {
-            label: it.resume.settings?.labels?.categoryProperty?.work?.website, 
-            value: work.website,
-            id: 'work-website',
-        }) %>
-        <%~ include('key-value-item', {
-            label: it.resume.settings?.labels?.categoryProperty?.work?.summary, 
-            value: work.summary,
-            id: 'work-summary',
-        }) %>
-        <%~ include('list', {
-			label: it.resume.settings?.labels?.categoryProperty?.work?.highlights, 
-			data: work.highlights,
-			id: 'work-highlights',
-		}) %>
+    <div class="category-container">
+        <% it.resume?.work.forEach(function(work) { %>
+            <div class="category-item-container">
+                <%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.work, showDelete: true, id: work.id}) %>
+                <div class="headline-complex">
+                    <%~ include('date-range', {
+                        formatDate: it.formatDate,
+                        startDate: work.startDate,
+                        endDate: work.endDate,
+                        present: work.present,
+                        settings: it.resume.settings,
+                        showLabel: false
+                    }) %>
+                    <div class="headline-complex__separator"></div>
+                    <div class="headline-complex__content">
+                        <%~ include('key-value-item', {
+                            label: it.resume.settings?.labels?.categoryProperty?.work?.company, 
+                            value: work.company,
+                            showLabel: false,
+                            classes: 'headline-complex__title category-item-title',
+                        }) %>
+                        <%~ include('key-value-item', {
+                            label: it.resume.settings?.labels?.categoryProperty?.work?.position, 
+                            value: work.position,
+                            showLabel: false,
+                            classes: 'headline-complex__subtitle',
+                        }) %>
+                    </div>
+                </div>
+                <%~ include('key-value-item', {
+                    label: it.resume.settings?.labels?.categoryProperty?.work?.website, 
+                    value: work.website,
+                    showLabel: false
+                }) %>
+                <%~ include('key-value-item', {
+                    label: it.resume.settings?.labels?.categoryProperty?.work?.summary, 
+                    value: work.summary
+                }) %>
+                <%~ include('list', {
+                    label: it.resume.settings?.labels?.categoryProperty?.work?.highlights, 
+                    data: work.highlights
+                }) %>
+            </div>
+        <% }) %>
     </div>
-    <% }) %>
     <%~ include('add', {categoryKey: it.resume?.settings?.categoryKeys?.work}) %>
 </section>
