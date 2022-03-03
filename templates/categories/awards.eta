@@ -8,7 +8,7 @@
 				<%~ include('nav', {categoryKey: it.resume.settings?.categoryKeys?.award, id: award.id, showDelete: true}) %>
 					<%~ include('key-value-item', {
 					label: it.resume.settings?.labels?.categoryProperty?.award?.date, 
-					value: it.formatDate(award.date, it.resume.settings),
+					value: award.date,
 					showLabel: false,
 					id: 'date',
 				}) %>

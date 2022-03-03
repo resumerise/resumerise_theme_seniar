@@ -9,8 +9,7 @@
 		<div class="category-item-container">
 			<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.education, showDelete: true, id: education.id}) %>
 			<div class="headline-complex">
-				<%~ include('date-range', {
-					formatDate: it.formatDate, 
+				<%~ include('date-range', { 
 					startDate: education.startDate,
 					endDate: education.endDate,
 					present: education.present,

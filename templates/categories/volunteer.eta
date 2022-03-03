@@ -10,7 +10,6 @@
 				<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.volunteer, showDelete: true, id: volunteer.id}) %>
 				<div class="headline-complex">
                     <%~ include('date-range', {
-						formatDate: it.formatDate,
 						startDate: volunteer.startDate,
 						endDate: volunteer.endDate,
 						present: volunteer.present,
